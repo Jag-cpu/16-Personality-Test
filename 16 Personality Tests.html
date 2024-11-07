@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Personalities Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .answers {
+            display: flex;
+            flex-direction: column;
+        }
+        .answers label {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+        .description {
+            font-size: 16px;
+            color: #555;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>16 Personalities Test</h1>
+        
+        <div id="quiz">
+            <!-- Question 1 -->
+            <div class="question" id="question1">
+                <p>1. You find it easy to introduce yourself to other people.</p>
+                <div class="answers">
+                    <input type="radio" id="q1a1" name="q1" value="E" required>
+                    <label for="q1a1">Agree</label>
+                    <input type="radio" id="q1a2" name="q1" value="I">
+                    <label for="q1a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="question2">
+                <p>2. You often get so lost in thoughts that you ignore or forget your surroundings.</p>
+                <div class="answers">
+                    <input type="radio" id="q2a1" name="q2" value="I" required>
+                    <label for="q2a1">Agree</label>
+                    <input type="radio" id="q2a2" name="q2" value="E">
+                    <label for="q2a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="question3">
+                <p>3. You find it easy to stay relaxed and focused even under pressure.</p>
+                <div class="answers">
+                    <input type="radio" id="q3a1" name="q3" value="S" required>
+                    <label for="q3a1">Agree</label>
+                    <input type="radio" id="q3a2" name="q3" value="N">
+                    <label for="q3a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question" id="question4">
+                <p>4. You enjoy activities that allow you to be creative and express yourself.</p>
+                <div class="answers">
+                    <input type="radio" id="q4a1" name="q4" value="N" required>
+                    <label for="q4a1">Agree</label>
+                    <input type="radio" id="q4a2" name="q4" value="S">
+                    <label for="q4a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question" id="question5">
+                <p>5. You are more inclined to focus on the facts and details of a situation than the big picture.</p>
+                <div class="answers">
+                    <input type="radio" id="q5a1" name="q5" value="S" required>
+                    <label for="q5a1">Agree</label>
+                    <input type="radio" id="q5a2" name="q5" value="N">
+                    <label for="q5a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question" id="question6">
+                <p>6. You prefer to stick to a schedule and plan ahead.</p>
+                <div class="answers">
+                    <input type="radio" id="q6a1" name="q6" value="J" required>
+                    <label for="q6a1">Agree</label>
+                    <input type="radio" id="q6a2" name="q6" value="P">
+                    <label for="q6a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question" id="question7">
+                <p>7. You prefer to make decisions based on logic rather than personal feelings.</p>
+                <div class="answers">
+                    <input type="radio" id="q7a1" name="q7" value="T" required>
+                    <label for="q7a1">Agree</label>
+                    <input type="radio" id="q7a2" name="q7" value="F">
+                    <label for="q7a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question" id="question8">
+                <p>8. You enjoy taking charge of situations and being in control.</p>
+                <div class="answers">
+                    <input type="radio" id="q8a1" name="q8" value="J" required>
+                    <label for="q8a1">Agree</label>
+                    <input type="radio" id="q8a2" name="q8" value="P">
+                    <label for="q8a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question" id="question9">
+                <p>9. You are very empathetic and tend to focus on people's feelings.</p>
+                <div class="answers">
+                    <input type="radio" id="q9a1" name="q9" value="F" required>
+                    <label for="q9a1">Agree</label>
+                    <input type="radio" id="q9a2" name="q9" value="T">
+                    <label for="q9a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question" id="question10">
+                <p>10. You prefer to keep your options open and avoid making decisions too quickly.</p>
+                <div class="answers">
+                    <input type="radio" id="q10a1" name="q10" value="P" required>
+                    <label for="q10a1">Agree</label>
+                    <input type="radio" id="q10a2" name="q10" value="J">
+                    <label for="q10a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Additional Questions 11 to 40 -->
+            <div class="question" id="question11">
+                <p>11. You prefer spending time in a calm and quiet environment.</p>
+                <div class="answers">
+                    <input type="radio" id="q11a1" name="q11" value="I" required>
+                    <label for="q11a1">Agree</label>
+                    <input type="radio" id="q11a2" name="q11" value="E">
+                    <label for="q11a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question12">
+                <p>12. You feel more energized after spending time with others.</p>
+                <div class="answers">
+                    <input type="radio" id="q12a1" name="q12" value="E" required>
+                    <label for="q12a1">Agree</label>
+                    <input type="radio" id="q12a2" name="q12" value="I">
+                    <label for="q12a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question13">
+                <p>13. You enjoy deep, intellectual conversations.</p>
+                <div class="answers">
+                    <input type="radio" id="q13a1" name="q13" value="N" required>
+                    <label for="q13a1">Agree</label>
+                    <input type="radio" id="q13a2" name="q13" value="S">
+                    <label for="q13a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question14">
+                <p>14. You prefer working on one project at a time.</p>
+                <div class="answers">
+                    <input type="radio" id="q14a1" name="q14" value="J" required>
+                    <label for="q14a1">Agree</label>
+                    <input type="radio" id="q14a2" name="q14" value="P">
+                    <label for="q14a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question15">
+                <p>15. You are highly organized and enjoy creating plans.</p>
+                <div class="answers">
+                    <input type="radio" id="q15a1" name="q15" value="J" required>
+                    <label for="q15a1">Agree</label>
+                    <input type="radio" id="q15a2" name="q15" value="P">
+                    <label for="q15a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question16">
+                <p>16. You enjoy new experiences and often seek adventure.</p>
+                <div class="answers">
+                    <input type="radio" id="q16a1" name="q16" value="E" required>
+                    <label for="q16a1">Agree</label>
+                    <input type="radio" id="q16a2" name="q16" value="I">
+                    <label for="q16a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question17">
+                <p>17. You prefer working independently rather than as part of a team.</p>
+                <div class="answers">
+                    <input type="radio" id="q17a1" name="q17" value="I" required>
+                    <label for="q17a1">Agree</label>
+                    <input type="radio" id="q17a2" name="q17" value="E">
+                    <label for="q17a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question18">
+                <p>18. You feel drained after large social gatherings.</p>
+                <div class="answers">
+                    <input type="radio" id="q18a1" name="q18" value="I" required>
+                    <label for="q18a1">Agree</label>
+                    <input type="radio" id="q18a2" name="q18" value="E">
+                    <label for="q18a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question19">
+                <p>19. You feel confident in your ability to solve complex problems.</p>
+                <div class="answers">
+                    <input type="radio" id="q19a1" name="q19" value="T" required>
+                    <label for="q19a1">Agree</label>
+                    <input type="radio" id="q19a2" name="q19" value="F">
+                    <label for="q19a2">Disagree</label>
+                </div>
+            </div>
+
+            <div class="question" id="question20">
+                <p>20. You often reflect on your personal values and beliefs.</p>
+                <div class="answers">
+                    <input type="radio" id="q20a1" name="q20" value="F" required>
+                    <label for="q20a1">Agree</label>
+                    <input type="radio" id="q20a2" name="q20" value="T">
+                    <label for="q20a2">Disagree</label>
+                </div>
+            </div>
+
+            <!-- Questions 21 to 40 follow similar pattern -->
+            <!-- Add questions 21 through 40 following the same structure -->
+
+            <!-- Submit Button -->
+            <button class="btn" id="submitButton">See Your Result</button>
+        </div>
+
+        <div class="result" id="result">
+            <p id="resultText"></p>
+            <div id="description" class="description"></div>
+        </div>
+    </div>
+
+    <script>
+        const descriptions = {
+            "INTJ": "INTJ – The Architect: Analytical, innovative, and curious, INTJs are often seen as logical problem-solvers. They are perfectionists who love complex ideas and theories.",
+            "INTP": "INTP – The Thinker: Innovative and intellectual, INTPs love exploring theories and abstract concepts. They enjoy debates and intellectual discussions, seeking deeper understanding.",
+            "ENTJ": "ENTJ – The Commander: Bold, strategic, and driven, ENTJs are natural-born leaders. They are ambitious, decisive, and excel in organizing people and projects.",
+            "ENTP": "ENTP – The Debater: ENTPs are inventive, curious, and have a knack for finding creative solutions. They enjoy debate and challenge existing ideas.",
+            "INFJ": "INFJ – The Advocate: Deeply insightful and compassionate, INFJs are often concerned with helping others. They are idealistic and value authenticity.",
+            "INFP": "INFP – The Mediator: Idealistic, empathetic, and driven by values, INFPs are often focused on personal growth and the well-being of others.",
+            "ENFJ": "ENFJ – The Protagonist: Charismatic and inspiring, ENFJs are natural leaders who enjoy guiding others toward their goals. They care deeply about people and relationships.",
+            "ENFP": "ENFP – The Campaigner: Energetic, enthusiastic, and passionate, ENFPs love to explore possibilities and inspire others with their ideas and dreams.",
+            "ISTJ": "ISTJ – The Logistician: Practical and responsible, ISTJs are detail-oriented and reliable. They value tradition and are often dependable, hardworking individuals.",
+            "ISFJ": "ISFJ – The Defender: Warm, supportive, and meticulous, ISFJs are focused on meeting others' needs and creating stability in their environments.",
+            "ESTJ": "ESTJ – The Executive: Practical, efficient, and organized, ESTJs excel at making decisions and ensuring things get done on time. They value order and structure.",
+            "ESFJ": "ESFJ – The Consul: Warm-hearted and social, ESFJs enjoy helping others and maintaining harmony in their relationships. They are responsible and conscientious.",
+            "ISTP": "ISTP – The Virtuoso: Independent, action-oriented, and analytical, ISTPs are often found experimenting with the world around them. They enjoy solving practical problems.",
+            "ISFP": "ISFP – The Adventurer: Creative, artistic, and spontaneous, ISFPs enjoy expressing themselves in unique ways and experiencing the world with an open mind.",
+            "ESTP": "ESTP – The Entrepreneur: Energetic, bold, and action-oriented, ESTPs love living in the moment and engaging with the world around them in an adventurous way.",
+            "ESFP": "ESFP – The Entertainer: Fun-loving, sociable, and spontaneous, ESFPs enjoy being the center of attention and bringing joy to others with their lively personalities."
+        };
+
+        // Event listener to trigger result calculation
+        document.getElementById('submitButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            let result = '';
+            let score = { 'I': 0, 'E': 0, 'S': 0, 'N': 0, 'T': 0, 'F': 0, 'J': 0, 'P': 0 };
+
+            // Check each question and tally the answers
+            for (let i = 1; i <= 40; i++) {  // Now loop through all 40 questions
+                const answer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (answer) {
+                    score[answer.value]++;
+                }
+            }
+
+            // Determine personality based on majority answers
+            result += score['I'] > score['E'] ? 'I' : 'E';
+            result += score['S'] > score['N'] ? 'S' : 'N';
+            result += score['T'] > score['F'] ? 'T' : 'F';
+            result += score['J'] > score['P'] ? 'J' : 'P';
+
+            // Display result
+            document.getElementById('resultText').innerText = 'Your Personality: ' + result;
+            document.getElementById('description').innerText = descriptions[result];
+
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
